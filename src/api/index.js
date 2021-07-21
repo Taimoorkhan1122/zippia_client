@@ -1,7 +1,7 @@
 import axios from "axios";
 import moment from "moment";
 
-const url = "http://localhost:5000/api/test/jobs";
+const url = "https://zippia-server.herokuapp.com/api/test/jobs";
 
 const getDate = (postingDate) => {
   const date = postingDate.replace("T", " ");
