@@ -8,10 +8,11 @@ import { fetchPastWeekJobs } from "../api";
 
 
 const JobsContainer = ({data, setData}) => {
-  console.log(data);
+  // filtering only 10 jobs from fetchded data 
   const jobs = data.jobs.filter((job, index) => index < 10 && job);
-  const handleClick =  () => {
-    
+  
+  const handleClick =  () => {    
+    // if button is clicked we will the fetchPastWeekJobs function which returns jobs that were posted 1 week ago
     setData(fetchPastWeekJobs(data));
   } 
 
@@ -60,6 +61,7 @@ const JobsContainer = ({data, setData}) => {
       </div>
       <div className={styles.cardsContainer}>
         <Slider {...settings}>
+          {/* mapping through jobs array and rendering jobs card */}
           {jobs.map((job, index) =>   <JobsCard key={index +"_0"+index} job={job} />)}
         </Slider>
       </div>

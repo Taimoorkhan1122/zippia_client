@@ -5,6 +5,7 @@ import JobsContainer from "./JobsContainer";
 import styles from "./homepage.module.css";
 
 const Homepage = ({data, setData}) => {
+
   const [jobs, setJobs] = useState(data);
   return (
     <div className={styles.container}>
@@ -13,10 +14,11 @@ const Homepage = ({data, setData}) => {
         <p>Discover your options with your personalized career search</p>
       </div>
       <Search setData={setJobs} />
-      {console.log("hererer =-> ", jobs)}
+      {/* if no jobs are not found show error message */}
       {!jobs.found ? (
         <div className={styles.notFound}>{jobs[0].message}</div>
       ) : (
+        // if jobs are found show jobs container and pass jobs data
         <JobsContainer data={jobs.data} setData={setJobs} />
       )}
     </div>
