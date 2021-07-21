@@ -1,0 +1,30 @@
+.container {  
+    background-color: rgb(14, 7, 2);
+}
+
+.nav {
+    max-width: 1280px;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    margin: auto;
+}
+.logo {
+    flex: 1;
+}
+.nav > ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1;
+    color: white;
+    text-decoration: none;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+ .nav > ul > li:hover {
+        cursor: pointer;
+        color: rgb(148, 148, 148);
+    }
